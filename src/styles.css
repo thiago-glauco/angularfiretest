@@ -1,1 +1,13 @@
 /* Add application styles & imports to this file! */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  background-color: aliceblue;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.content{
+  margin: auto;
+  padding: auto;
+}

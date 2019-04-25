@@ -1,6 +1,13 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-  {{ items | async | json }}
-</p>
+<mat-toolbar color="primary" fxFlexLayout="row">
+  <h1>AngularFire App</h1>
+</mat-toolbar>
+<div class="container" fxFlexLayout.gt-xs="row" fxFlexLayout.xs="column">
+  <div class="content" fxFlex.gt-xs="80%">
+    <p>
+      Start editing to see some magic happen :)
+      {{ items | async | json }}
+    </p>
+    <p>{{item}}</p>
+  </div>
+</div>
       

@@ -1,13 +1,23 @@
+import 'hammerjs';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//Firebase Imports
 import { AngularFireModule,  } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+//Material Design and Flex-Layout Imports:
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { CompanyEditComponent } from './company/company-edit/company-edit.component';
 
 
 const firebaseConfig = {
@@ -26,8 +36,11 @@ const firebaseConfig = {
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatToolbarModule
     ],
-  declarations: [AppComponent, HelloComponent],
+  declarations: [AppComponent, HelloComponent, CompanyEditComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
