@@ -17,6 +17,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import {MatCardModule} from '@angular/material/card';
+
+
+//Routing
+import {AppRoutingModule} from './app-routing/app-routing.module';
+import { CompanyService } from './company/company.service';
+
 import { CompanyEditComponent } from './company/company-edit/company-edit.component';
 
 
@@ -38,9 +45,12 @@ const firebaseConfig = {
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule,
+    AppRoutingModule
     ],
   declarations: [AppComponent, HelloComponent, CompanyEditComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [CompanyService]
 })
 export class AppModule { }

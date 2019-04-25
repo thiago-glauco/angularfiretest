@@ -1,0 +1,6 @@
+<h1>Edit Company</h1>
+<mat-card *ngIf="company$ | async as company">
+  <mat-card-content>
+    <p>{{company.name}}</p>
+  </mat-card-content>
+</mat-card>

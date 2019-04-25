@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CompanyEditComponent } from './company/company-edit/company-edit.component';
 import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators'
