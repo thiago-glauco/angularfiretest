@@ -1,6 +1,8 @@
 <h1>Edit Company</h1>
 <mat-card *ngIf="company$ | async as company">
   <mat-card-content>
-    <p>{{company.name}}</p>
+    <p matLine>{{company.name}}</p>
+    <p matLine><input type="text" matInput [(ngModel)]="company.name"></p>
   </mat-card-content>
+  
 </mat-card>

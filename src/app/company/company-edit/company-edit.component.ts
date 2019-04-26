@@ -10,12 +10,13 @@ import { Observable } from 'rxjs';
 })
 
 export class CompanyEditComponent implements OnInit {
-  company$: AngularFireObject<any>;
+  company$: Observable<any>;
+  companyValues: Observable<any>;
 
   constructor(
       private companyService: CompanyService
     ) { 
-      this.company$ = this.companyService.company$;
+      
     }
 
   saveCompany( company ) {
@@ -23,6 +24,8 @@ export class CompanyEditComponent implements OnInit {
   } 
 
   ngOnInit() {
+    this.company$ = this.companyService.getCompany();
+    console.log(this.company$);
   }
 
 }
