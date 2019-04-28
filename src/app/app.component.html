@@ -1,14 +1,10 @@
 <mat-toolbar color="primary" fxFlexLayout="row">
-  <h1>AngularFire App</h1>
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="nav-button">
+    <h1 fxFlex>AngularFire App</h1>
+    <a fxFlex.gt-xs="20%" fxFlex.xs="40%" mat-raised-button [routerLink]="['/company-edit']" color="primary"><mat-icon>edit</mat-icon> Edit</a>
+  </div>
 </mat-toolbar>
 <div class="container" fxFlexLayout.gt-xs="row" fxFlexLayout.xs="column">
-  <div class="content" fxFlex.gt-xs="80%">
-    <p>
-      Start editing to see some magic happen :)
-      {{ items | async | json }}
-    </p>
-    <p>{{item}}</p>
-    <app-company-edit></app-company-edit>
-  </div>
+    <router-outlet></router-outlet>
 </div>
       

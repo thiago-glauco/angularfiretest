@@ -8,6 +8,10 @@ import { routes } from './routes';
     CommonModule,
      RouterModule.forRoot(routes)
   ],
+  exports: [ 
+    RouterModule
+  ],
   declarations: []
 })
+
 export class AppRoutingModule { }

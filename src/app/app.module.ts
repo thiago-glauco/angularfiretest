@@ -14,18 +14,18 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 //Material Design and Flex-Layout Imports:
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import {MatCardModule} from '@angular/material/card';
 
-
 //Routing
 import {AppRoutingModule} from './app-routing/app-routing.module';
+
 import { CompanyService } from './company/company.service';
-
 import { CompanyEditComponent } from './company/company-edit/company-edit.component';
-
+import { CompanyListComponent } from './company/company-list/company-list.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCRYRB51xapHQAdN2FwkDZAZBbeYVx7MIc",
@@ -47,9 +47,11 @@ const firebaseConfig = {
     FlexLayoutModule,
     MatToolbarModule,
     MatCardModule,
+    MatIconModule,
+    MatButtonModule,
     AppRoutingModule
     ],
-  declarations: [AppComponent, HelloComponent, CompanyEditComponent],
+  declarations: [AppComponent, HelloComponent, CompanyEditComponent, CompanyListComponent],
   bootstrap: [AppComponent],
   providers: [CompanyService]
 })
